@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const userController_1 = require("../controllers/userController");
+const userController_2 = require("../controllers/userController");
+const userController_3 = require("../controllers/userController");
+// import upload from "../middleware/multerMiddleware";
+const router = (0, express_1.Router)();
+router.post("/user", userController_1.createUser);
+router.get('/user/:id', userController_2.getUserById);
+router.put('/user/:id', userController_3.updateUser);
+exports.default = router;
